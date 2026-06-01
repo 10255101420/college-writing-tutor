@@ -3,89 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>智能批改 | 英语写作助手</title>
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:"Microsoft Yahei",Arial,sans-serif;max-width:1100px;margin:0 auto;padding:20px;background:#f8f9fa;}
-        nav{background:#2c3e50;padding:15px;border-radius:8px;margin-bottom:30px;}
-        nav a{color:#fff;text-decoration:none;margin:0 12px;font-size:15px;}
-        .content{background:#fff;padding:25px;border-radius:8px;box-shadow:0 2px 8px #eee;}
-        h2{color:#2c3e50;margin-bottom:20px;}
-        textarea{width:100%;height:120px;padding:10px;margin:10px 0;border:1px solid #ccc;border-radius:4px;}
-        button{padding:8px 20px;background:#3498db;color:#fff;border:none;border-radius:4px;cursor:pointer;}
-        button:hover{background:#2980b9;}
-        .result{margin-top:20px;padding:15px;border:1px solid #eee;border-radius:6px;line-height:1.8;}
-        .error{color:#e74c3c;}
-        .tip{color:#27ae60;}
-    </style>
+    <title>四六级英语写作助手 | 智能批改</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html">首页</a>
-        <a href="sentence.html">Lv1 句子基础</a>
-        <a href="paragraph.html">Lv2 段落逻辑</a>
-        <a href="essay.html">Lv3 篇章模板</a>
-        <a href="check.html">智能批改</a>
+        <a href="index.html">首页·范文生成</a>
+        <a href="sentence.html">高分句型</a>
+        <a href="paragraph.html">段落模板</a>
+        <a href="essay.html">篇章模板</a>
+        <a href="check.html" class="active">智能批改</a>
     </nav>
 
-    <div class="content">
-        <h2>英语作文智能多轮批改</h2>
-        <p>第一步：输入作文题目</p>
-        <textarea id="topic" placeholder="请输入英语作文题目..."></textarea>
-
-        <p>第二步：输入你的作文原文（支持空格、多行文本）</p>
-        <textarea id="article" placeholder="粘贴/输入作文内容..."></textarea>
-
-        <button onclick="startCheck()">开始批改分析</button>
-
-        <div class="result" id="result"></div>
+    <div class="container">
+        <h1>? 智能作文批改</h1>
+        <div class="module">
+            <h2>语法/词汇/句式/逻辑/得分点多维度批改</h2>
+            <textarea id="userEssay" placeholder="在此粘贴/输入你写的英语作文，点击批改"></textarea>
+            <button class="btn" onclick="checkEssay()">开始智能批改</button>
+            <div class="content-box" id="checkBox"></div>
+        </div>
     </div>
 
-    <script>
-        // 简易错误词库
-        const errorWords = {
-            "teh":"the",
-            "wrold":"world",
-            "book":"books",
-            "like":"likes"
-        };
-
-        // 第一轮：审题分析
-        function analyzeTopic(topic){
-            return `【第一轮 题目解析】\n作文题目：${topic}\n建议写作角度：围绕主题分2~3个论点展开；\n文章结构：开头引入话题，中间分段论述，结尾总结观点。\n请问你初步打算从哪几个角度写作？`;
-        }
-
-        // 第二轮：拼写+语法检查
-        function checkArticle(text){
-            let newText = text;
-            let errTip = "";
-            for(let key in errorWords){
-                if(text.includes(key)){
-                    errTip += `发现错误单词：${key} → 建议改为 ${errorWords[key]}\n`;
-                    newText = newText.replaceAll(key,`<span class="error">${key}(${errorWords[key]})</span>`);
-                }
-            }
-            if(errTip === "") errTip = "<span class='tip'>未检测到明显拼写错误</span>";
-            return errTip;
-        }
-
-        // 第三轮：润色&提升建议
-        function getAdvice(){
-            return `\n【第三轮 润色与提升建议】\n1. 适当使用过渡词，增强段落逻辑；\n2. 简单句可改写为并列句、复合句提升文采；\n3. 积累高级替换词汇，避免重复用词。\n你可以修改后再次提交，进行二次优化批改。`;
-        }
-
-        // 主交互入口（多轮串联）
-        function startCheck(){
-            const topic = document.getElementById("topic").value;
-            const article = document.getElementById("article").value;
-            let res = "";
-
-            res += analyzeTopic(topic) + "\n\n";
-            res += "【第二轮 拼写与语法检查】\n" + checkArticle(article) + "\n\n";
-            res += getAdvice();
-
-            document.getElementById("result").innerText = res;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
