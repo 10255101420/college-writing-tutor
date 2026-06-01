@@ -3,53 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CollegeWritingTutor - 大学英语写作助手</title>
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:"Microsoft Yahei",Arial,sans-serif;max-width:1100px;margin:0 auto;padding:20px;background:#f8f9fa;}
-        header{text-align:center;margin:30px 0;}
-        h1{color:#2c3e50;margin-bottom:10px;}
-        .desc{color:#666;font-size:16px;}
-        nav{background:#2c3e50;padding:15px;border-radius:8px;margin-bottom:30px;}
-        nav a{color:#fff;text-decoration:none;margin:0 12px;font-size:15px;}
-        nav a:hover{text-decoration:underline;}
-        .level-box{background:#fff;padding:25px;border-radius:8px;box-shadow:0 2px 8px #eee;margin-bottom:20px;}
-        .level{margin:15px 0;padding:12px;border-left:4px solid #3498db;background:#f5f9ff;}
-        .level h3{color:#2980b9;margin-bottom:5px;}
-    </style>
+    <title>四六级英语写作助手 | 首页</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>CollegeWritingTutor 大学英语写作可视化学习助手</h1>
-        <p class="desc">对标可视化教学平台，分级学习、交互练习、智能批改一站式学习</p>
-    </header>
-
     <nav>
-        <a href="index.html">首页</a>
-        <a href="sentence.html">Lv1 句子基础</a>
-        <a href="paragraph.html">Lv2 段落逻辑</a>
-        <a href="essay.html">Lv3 篇章模板</a>
+        <a href="index.html" class="active">首页·范文生成</a>
+        <a href="sentence.html">高分句型</a>
+        <a href="paragraph.html">段落模板</a>
+        <a href="essay.html">篇章模板</a>
         <a href="check.html">智能批改</a>
     </nav>
 
-    <div class="level-box">
-        <h2>学习分级体系（Lv1 ~ Lv4）</h2>
-        <div class="level">
-            <h3>Lv1 句子基础写作</h3>
-            <p>简单句构造、时态、主谓一致、基础语法规范</p>
-        </div>
-        <div class="level">
-            <h3>Lv2 段落写作逻辑</h3>
-            <p>主题句、扩展句、过渡衔接、段落组织技巧</p>
-        </div>
-        <div class="level">
-            <h3>Lv3 篇章结构与文体模板</h3>
-            <p>议论文、书信、图表作文框架，开头/主体/结尾写法</p>
-        </div>
-        <div class="level">
-            <h3>Lv4 高分润色与瓶颈突破</h3>
-            <p>高级词汇、复合句式、全文优化、个性化写作提升</p>
+    <div class="container">
+        <h1>?? 四六级英语写作助手</h1>
+        <div class="module">
+            <h2>一键生成四六级范文（可反复生成不同文章）</h2>
+            <button class="btn" onclick="generateEssay()">点击生成新范文</button>
+            <div class="content-box" id="essayBox"></div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
