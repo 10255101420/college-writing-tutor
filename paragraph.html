@@ -3,41 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lv2 段落逻辑 | 英语写作助手</title>
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:"Microsoft Yahei",Arial,sans-serif;max-width:1100px;margin:0 auto;padding:20px;background:#f8f9fa;}
-        nav{background:#2c3e50;padding:15px;border-radius:8px;margin-bottom:30px;}
-        nav a{color:#fff;text-decoration:none;margin:0 12px;font-size:15px;}
-        .content{background:#fff;padding:25px;border-radius:8px;box-shadow:0 2px 8px #eee;}
-        h2{color:#2c3e50;margin-bottom:20px;}
-        .para{margin:18px 0;line-height:1.8;}
-        .key{color:#3498db;font-weight:bold;}
-    </style>
+    <title>四六级英语写作助手 | 段落模板</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html">首页</a>
-        <a href="sentence.html">Lv1 句子基础</a>
-        <a href="paragraph.html">Lv2 段落逻辑</a>
-        <a href="essay.html">Lv3 篇章模板</a>
+        <a href="index.html">首页·范文生成</a>
+        <a href="sentence.html">高分句型</a>
+        <a href="paragraph.html" class="active">段落模板</a>
+        <a href="essay.html">篇章模板</a>
         <a href="check.html">智能批改</a>
     </nav>
 
-    <div class="content">
-        <h2>Lv2 段落写作逻辑</h2>
-        <div class="para">
-            <h3>段落结构：主题句 → 扩展句 → 结尾句</h3>
-            <p><span class="key">主题句</span>：点明段落中心思想，一般放在段首。</p>
-            <p><span class="key">扩展句</span>：举例、解释、补充细节，支撑主题。</p>
-            <p><span class="key">结尾句</span>：总结、重申观点。</p>
-        </div>
-        <div class="para">
-            <h3>常用过渡衔接词</h3>
-            <p>递进：besides, what’s more, in addition</p>
-            <p>转折：however, but, on the contrary</p>
-            <p>总结：in short, in a word, all in all</p>
+    <div class="container">
+        <h1>?? 段落写作逻辑模板</h1>
+        <div class="module">
+            <h2>开头/过渡/主体/结尾全场景模板</h2>
+            <button class="btn" onclick="showParagraph()">查看段落模板</button>
+            <div class="content-box" id="paraBox"></div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
