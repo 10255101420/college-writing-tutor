@@ -3,41 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lv3 篇章模板 | 英语写作助手</title>
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:"Microsoft Yahei",Arial,sans-serif;max-width:1100px;margin:0 auto;padding:20px;background:#f8f9fa;}
-        nav{background:#2c3e50;padding:15px;border-radius:8px;margin-bottom:30px;}
-        nav a{color:#fff;text-decoration:none;margin:0 12px;font-size:15px;}
-        .content{background:#fff;padding:25px;border-radius:8px;box-shadow:0 2px 8px #eee;}
-        h2{color:#2c3e50;margin-bottom:20px;}
-        .template{margin:20px 0;line-height:1.8;border:1px solid #ddd;padding:15px;border-radius:6px;}
-    </style>
+    <title>四六级英语写作助手 | 篇章模板</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html">首页</a>
-        <a href="sentence.html">Lv1 句子基础</a>
-        <a href="paragraph.html">Lv2 段落逻辑</a>
-        <a href="essay.html">Lv3 篇章模板</a>
+        <a href="index.html">首页·范文生成</a>
+        <a href="sentence.html">高分句型</a>
+        <a href="paragraph.html">段落模板</a>
+        <a href="essay.html" class="active">篇章模板</a>
         <a href="check.html">智能批改</a>
     </nav>
 
-    <div class="content>
-        <h2>Lv3 篇章结构与常考文体模板</h2>
-        <div class="template">
-            <h3>议论文通用框架</h3>
-            <p>开头：引出话题，表明观点</p>
-            <p>主体段1：阐述理由一 + 细节/举例</p>
-            <p>主体段2：阐述理由二 + 细节/举例</p>
-            <p>结尾：总结全文，重申观点</p>
-        </div>
-        <div class="template">
-            <h3>书信类作文模板</h3>
-            <p>称呼 → 自我介绍 + 写信目的</p>
-            <p>正文：分点说明内容</p>
-            <p>结尾：祝福 + 落款</p>
+    <div class="container">
+        <h1>?? 四六级篇章模板库</h1>
+        <div class="module">
+            <h2>图画/观点/现象/应用文全题型模板</h2>
+            <button class="btn" onclick="showTemplate()">查看作文模板</button>
+            <div class="content-box" id="tempBox"></div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
